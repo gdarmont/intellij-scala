@@ -62,6 +62,7 @@ object Dependencies {
   val mavenIndexerCore = "org.apache.maven.indexer" % "indexer-core" % "6.0"
   val mavenModel = "org.apache.maven" % "maven-model" % "3.0.5"
 
+  val scalaMetaCore = "org.scalameta" % "scalameta_2.11" % "0.1.0-SNAPSHOT"
 
 }
 
@@ -115,6 +116,10 @@ object DependencyGroups {
     mavenModel
   ) ++ plexusContainer ++ lucene ++ aether ++ sisu ++ wagon
 
+  val scalaMeta = Seq(
+    scalaMetaCore
+  )
+
   val scalaCommunity = Seq(
     scalaLibrary,
     scalaReflect,
@@ -122,7 +127,7 @@ object DependencyGroups {
     scalaParserCombinators,
     sbtStructureCore,
     evoInflector
-  ) ++ mavenIndexer
+  ) ++ mavenIndexer ++ scalaMeta
 
   val scalaRunner = Seq(
     "org.specs2" %% "specs2" % "2.3.11" % "provided" excludeAll ExclusionRule(organization = "org.ow2.asm")
