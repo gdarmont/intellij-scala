@@ -18,7 +18,6 @@ import org.jetbrains.plugins.scala.lang.psi.types.result.{Success, TypeResult, T
 import org.jetbrains.plugins.scala.meta.trees.ConverterImpl
 
 import scala.meta.Term
-import scala.meta.dialects.Scala211
 import scala.meta.internal.{ast => m}
 import scala.meta.eval._
 
